@@ -1,0 +1,38 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    color: aqua;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.portfolio-item {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+
+.portfolio img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    flex-direction: column;
+}

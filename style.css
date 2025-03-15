@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: whitesmoke;
+}
+
+.head {
+    .inconsolata {
+        font-family: "Inconsolata", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+}
+
+.main {
+    background-position: center;
+    position: inherit;
+    font-family: sans-serif;
+}
+
+.navbar {
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navbar.img-header {
+    width: 300px;
+    cursor: pointer;
+    margin-top: -3;
+    margin-left: -2;
+    background-image: url(images/DAHB2511.JPG);
+}
+
+ul {
+    margin-top: -4;
+
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16px;
+}
+
+ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration-line: underline color: aqua;
+    margin-top: -3;
+}
+
+ul li a:hover {
+    color: brown;
+}

@@ -1,0 +1,115 @@
+header {
+
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    flex-direction: column;
+    height: 70vh;
+    padding: 1px;
+}
+
+.img-header {
+    border: 2px rgb(20, 25, 10);
+    border-radius: 150% 150% 150% 150%;
+    background-image: url(images/DSC09850.JPEG);
+    width: 300px;
+    height: 300px;
+    display: inline-flexbox;
+}
+
+.thick-black-border {
+    border-color: black;
+    border-width: auto;
+    border-style: solid;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0%;
+    padding: 0;
+    background: url(images/wallpaper.jpg);
+    background-size: calc(70%);
+    color: rgb(51, 47, 48);
+    border-radius: :0cap;
+
+}
+
+.intro {
+    border-radius: 50%;
+}
+
+ul {
+    margin-top: -3;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 16PX;
+}
+
+ul li a {
+    margin-top: -3;
+    text-decoration: underline;
+    text-decoration-line: calc(10);
+    color: rgb(37, 29, 45) font-weight: bold;
+    font-size: 16px;
+    padding: 10px 16px;
+    align-text: center;
+}
+
+h1 {
+    color: rgb(14, 78, 78);
+    font-family: initial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section {
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    margin-bottom: -3;
+    list-style: none;
+    display: inline;
+
+}
