@@ -1,13 +1,87 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
-    padding: 0%;
-    background-color: black;
-    color: white;
-    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #FAD0C4, #FFD1FF);
+    color: #5D4954;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    color: #B87B7B;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
 }
 
 h2 {
+    font-size: 22px;
+    margin-top: 20px;
+    border-bottom: 2px solid #D49A9A;
+    padding-bottom: 5px;
+}
 
-    justify-content: center;
+h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #B87B7B;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 1.0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li::before {
+    content: '•';
+    color: #D49A9A;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #D49A9A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #9E6F6F;
 }
