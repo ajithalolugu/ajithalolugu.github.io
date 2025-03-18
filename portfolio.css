@@ -100,51 +100,78 @@ hr {
 }
 
 .social-box {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .social-box a {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.social-box a:hover {
-    transform: scale(1.1);
+.social-box img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-box a:hover img {
+    transform: scale(1.2);
+    /* Zoom effect */
+    opacity: 1;
 }
 
 .intro-aboutme {
     text-align: center;
-    margin: 40px auto;
-    max-width: 800px;
+
 }
 
 .intro-aboutme h1 {
     font-size: 3em;
     color: #333;
+    text-decoration: none;
 }
 
 .intro-aboutme h3 {
     font-size: 1.5em;
     color: #555;
-}
-
-.button-container {
-    margin: 20px 0;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #D8A7B1;
-    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+}
+
+/* Center the Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically if needed */
+    gap: 15px;
+    /* Space between buttons */
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+/* Style for Buttons */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #d4a5a5;
+    /* Dusty rose color */
+    background-color: white;
+    color: #6d4c4c;
+    /* Darker rose tone */
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-    background-color: #C4959E;
+    background-color: #d4a5a5;
+    color: white;
+    transform: scale(1.1);
 }
 
 .intro-aboutme p {
