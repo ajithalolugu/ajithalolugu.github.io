@@ -12,7 +12,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -37,6 +36,7 @@ header {
     padding: 0;
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
 .left-items ul li a {
@@ -44,6 +44,13 @@ header {
     color: #333;
     font-size: 1.2em;
     font-weight: bold;
+
+}
+
+.right-items {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
 }
 
 .right-items ul li {
@@ -87,11 +94,7 @@ main {
     margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 2em;
-    margin: 10px 0;
-    color: #333;
-}
+
 
 hr {
     width: 50%;
