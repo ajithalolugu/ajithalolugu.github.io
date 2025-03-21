@@ -89,7 +89,7 @@ main {
 }
 
 .box-image {
-    border-radius: 50%;
+    border-radius: 100%;
     border: 5px solid #D8A7B1;
     margin-bottom: 20px;
 }
@@ -253,29 +253,4 @@ footer {
     padding: 50px 0;
     text-align: center;
 
-}
-
-
-
-.contact-form {
-    max-width: 400px;
-    margin: auto;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
 }
