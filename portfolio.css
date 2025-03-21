@@ -76,7 +76,7 @@ main {
 .bg-box {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100;
     width: 50%;
     height: 100%;
     background-color: #D8A7B1;
@@ -86,6 +86,7 @@ main {
 .main-box {
     text-align: center;
     margin-bottom: 40px;
+
 }
 
 .box-image {
@@ -98,7 +99,7 @@ main {
 
 hr {
     width: 50%;
-    border: 1px solid #D8A7B1;
+    border: 1px solid #3c3637;
     margin: 20px auto;
 }
 
@@ -178,9 +179,11 @@ hr {
 }
 
 .intro-aboutme p {
-    font-size: 1.1em;
+    font-size: 20px;
+    font-weight: 100;
     line-height: 1.6;
     color: #555;
+    display: inline;
 }
 
 /* Contact Section Styles */
