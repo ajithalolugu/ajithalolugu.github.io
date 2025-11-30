@@ -1,85 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <meta charset="utf-8" />
+    <title>Mahesh Pasupuleti</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* page background using mahesh_img.jpg with dark overlay for contrast */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-image:
+                linear-gradient(180deg, rgba(8, 20, 36, 0.66), rgba(2, 17, 27, 0.72)),
+                url("mahesh_img.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
+        /* ensure the centered content sits above the background */
+        main.center {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <div class="small-box"></div>
-                <div class="left-items">
-                    <ul class="no-bullets">
-                        <li><a href="./index.html">/Ajitha</a></li>
-                    </ul>
-                </div>
-                <div class="right-items">
-                    <ul class="nav-list">
-                        <li><a href="./index.html">ABOUT ME</a></li>
-                        <li><a href="./resume.html">RESUME</a></li>
-                        <li><a href="./projects.html">PORTFOLIO</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-
-                    </ul>
-                </div>
+    <main class="center">
+        <!-- two-column row: info left, image right (reverted) -->
+        <div class="profile-row">
+            <div class="info">
+                <h1 class="name">Mahesh Pasupuleti</h1>
+                <p class="role">Cloud Data Engineer</p>
+                <p class="sub">Building reliable, cloud-native &amp; AI-assisted data systems</p>
             </div>
-        </nav>
 
-    </header>
-
-    <main>
-        <div class="bg-box"></div>
-        <div class="main-box">
-            <img src="images/DSC09850.JPEG" alt="My profile picture" width="300" class="box-image">
-            <h2> AJITA<br>LOLUGU</h2>
-            <hr>
-
-            <div class="social-box">
-
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.jpg" alt="Facebook" width="55">
-                </a>
-                <a href="https://www.linkedin.com/in/ajita-lolugu-79650534a/" target="_blank" title="LinkedIn">
-                    <img src="images/plnkdn.jpg" alt="LinkedIn" width="60"></a>
+            <div class="avatar-container" aria-hidden="false">
+                <img class="avatar" src="mah_1.jpg" alt="Mahesh Pasupuleti — avatar">
             </div>
         </div>
-        <div class="intro-aboutme">
-            <h1>Hello</h1>
-            <h3>Here's who I am & what I do</h3>
 
-
-            <div class="button-container">
-                <a href="./resume.html" class="button" target="_blank">Resume</a>
-                <a href="./projects.html" class="button" target="_blank">Portfolio</a>
-            </div>
-
-            <p>
-                "I am an IT student with a strong passion for problem-solving and innovation. I chose IT because I am
-                fascinated by how
-                technology shapes the world and empowers businesses and individuals."
-            </p>
-        </div>
+        <!-- portfolio button centered below the row -->
+        <div class="btn-wrap">
+            <button class="btn-portfolio" type="button" onclick="location.href='Index1.html'">Portfolio</button>
         </div>
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Phone: (385) 216-1580</p>
-            </div>
-            <div class="footer-section">
-                <h4>Email</h4>
-                <p>ajithalolugu1990@gmail.com</p>
-            </div>
-        </div>
-
-    </footer>
 </body>
 
 </html>
