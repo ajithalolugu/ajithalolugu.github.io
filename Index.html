@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mahesh Pasupuleti</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* page background using mahesh_img.jpg with dark overlay for contrast */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-image:
+                linear-gradient(180deg, rgba(8, 20, 36, 0.66), rgba(2, 17, 27, 0.72)),
+                url("mahesh_img.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ensure the centered content sits above the background */
+        main.center {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="center">
+        <!-- two-column row: info left, image right (reverted) -->
+        <div class="profile-row">
+            <div class="info">
+                <h1 class="name">Mahesh Pasupuleti</h1>
+                <p class="role">Cloud Data Engineer</p>
+                <p class="sub">Building reliable, cloud-native &amp; AI-assisted data systems</p>
+            </div>
+
+            <div class="avatar-container" aria-hidden="false">
+                <img class="avatar" src="mah_1.jpg" alt="Mahesh Pasupuleti — avatar">
+            </div>
+        </div>
+
+        <!-- portfolio button centered below the row -->
+        <div class="btn-wrap">
+            <button class="btn-portfolio" type="button" onclick="location.href='Index1.html'">Portfolio</button>
+        </div>
+    </main>
+</body>
+
+</html>

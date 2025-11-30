@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Mahesh Pasupuleti | Cloud Data Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles1.css">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Data-flow background -->
+        <!-- <svg class="data-flow-bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g stroke="currentColor" stroke-opacity="1" stroke-width="2" fill="none">
+                <path d="M80 150 C280 40, 520 260, 720 140 S1100 160, 1120 260" class="flow-line" />
+                <path d="M120 420 C300 520, 540 360, 760 480 S1040 600, 1120 520" class="flow-line" />
+                <path d="M60 640 C260 560, 480 740, 720 680 S1000 700, 1120 760" class="flow-line" />
+            </g>
+            <g class="nodes" fill="currentColor">
+                <circle cx="80" cy="150" r="6" />
+                <circle cx="280" cy="40" r="6" />
+                <circle cx="520" cy="260" r="6" />
+                <circle cx="720" cy="140" r="6" />
+
+                <circle cx="120" cy="420" r="6" />
+                <circle cx="540" cy="360" r="6" />
+                <circle cx="760" cy="480" r="6" />
+
+                <circle cx="60" cy="640" r="6" />
+                <circle cx="480" cy="740" r="6" />
+                <circle cx="720" cy="680" r="6" />
+            </g>
+        </svg> -->
+        <!-- Database-structure background (corner clusters) -->
+        <svg class="db-structure-bg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+                <linearGradient id="dbGrad" x1="0" x2="1">
+                    <stop offset="0" stop-color="currentColor" stop-opacity="0.95" />
+                    <stop offset="1" stop-color="currentColor" stop-opacity="0.5" />
+                </linearGradient>
+            </defs>
+            <!-- four small DB clusters placed near corners -->
+            <g class="db-group" fill="url(#dbGrad)" stroke="currentColor" stroke-opacity="0.12" stroke-width="1">
+                <!-- top-left -->
+                <g class="db" transform="translate(120,110) scale(0.7)">
+                    <ellipse class="cyl-top" cx="0" cy="0" rx="70" ry="18" />
+                    <rect class="cyl-body" x="-70" y="0" width="140" height="72" rx="8" />
+                    <ellipse class="cyl-bottom" cx="0" cy="72" rx="70" ry="18" />
+                </g>
+                <!-- top-right -->
+                <g class="db" transform="translate(1080,110) scale(0.7)">
+                    <ellipse class="cyl-top" cx="0" cy="0" rx="70" ry="18" />
+                    <rect class="cyl-body" x="-70" y="0" width="140" height="72" rx="8" />
+                    <ellipse class="cyl-bottom" cx="0" cy="72" rx="70" ry="18" />
+                </g>
+                <!-- bottom-left -->
+                <g class="db" transform="translate(120,700) scale(0.7)">
+                    <ellipse class="cyl-top" cx="0" cy="0" rx="70" ry="18" />
+                    <rect class="cyl-body" x="-70" y="0" width="140" height="72" rx="8" />
+                    <ellipse class="cyl-bottom" cx="0" cy="72" rx="70" ry="18" />
+                </g>
+                <!-- bottom-right -->
+                <g class="db" transform="translate(1080,700) scale(0.7)">
+                    <ellipse class="cyl-top" cx="0" cy="0" rx="70" ry="18" />
+                    <rect class="cyl-body" x="-70" y="0" width="140" height="72" rx="8" />
+                    <ellipse class="cyl-bottom" cx="0" cy="72" rx="70" ry="18" />
+                </g>
+            </g>
+            <!-- subtle connectors (very faint) to avoid clutter -->
+            <g class="connectors" fill="none" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.06">
+                <path class="conn" d="M200 150 C300 140, 900 140, 1000 150" stroke-linecap="round" />
+                <path class="conn" d="M200 650 C300 660, 900 660, 1000 650" stroke-linecap="round" />
+            </g>
+        </svg>
+        <div class="shell">
+            <!-- Header -->
+            <header>
+                <div class="title-block">
+                    <h1>Mahesh Pasupuleti</h1>
+                    <h2>Cloud Data Engineer · Data Platforms · Analytics</h2>
+                    <div class="tagline-chip">
+                        <span>🚀</span>
+                        <span>Building reliable, cloud-native & AI-assisted data systems</span>
+                    </div>
+
+                    <!-- All Info button: opens modal with full portfolio content -->
+                    <!-- <button id="allInfoBtn" class="btn-all" type="button" aria-haspopup="dialog"
+                        aria-controls="allInfoModal">All Info</button> -->
+                </div>
+                <div class="contacts">
+                    <div><strong>Email:</strong> <a
+                            href="mailto:pasupuleti.m.n99@gmail.com">pasupuleti.m.n99@gmail.com</a></div>
+                    <div><strong>Phone:</strong> <a href="tel:+15405321253">+1 (540) 532-1253</a></div>
+                    <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mahesh-pasupuleti-b90a7a132"
+                            target="_blank" rel="noreferrer">linkedin.com/in/mahesh-pasupuleti-b90a7a132</a></div>
+                </div>
+            </header>
+            <!-- All Info Modal -->
+            <!-- <div id="allInfoModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal-backdrop" data-close="true"></div>
+                <div class="modal-content" role="document">
+                    <button class="modal-close" aria-label="Close" data-close="true">&times;</button>
+                    <div class="modal-body" id="modalBody" tabindex="0" aria-live="polite"></div>
+                    <div class="modal-actions">
+                        <button id="downloadBtn" class="btn-action" type="button">Download HTML</button>
+                        <button id="copyBtn" class="btn-action" type="button">Copy Text</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <main>
+
+                <div>
+                    <section class="card">
+                        <h3>Professional Summary</h3>
+                        <p class="summary-text">
+                            Cloud Data Engineer with 9+ years of experience designing and operating scalable data
+                            platforms in financial, AML, and analytics environments. Specialized in Snowflake, SQL
+                            Server, dbt, Prefect, Python, and AWS/Azure to deliver reliable, automated ETL/ELT
+                            pipelines and real-time reporting.
+                        </p>
+                        <p class="summary-text">
+                            Experienced in AI-assisted engineering using GitHub Copilot and LLM-based validation to
+                            accelerate development, enhance code quality, and detect data gaps across incoming
+                            sources. Proven track record integrating APIs, modernizing legacy platforms, and
+                            enabling business teams with high-quality, analytics-ready data.
+                        </p>
+                        <div class="badge-row">
+                            <span class="badge">Snowflake</span>
+                            <span class="badge">dbt &amp; Prefect</span>
+                            <span class="badge">AWS &amp; Azure</span>
+                            <span class="badge">AI/LLM Workflows</span>
+                            <span class="badge">Real-time Dashboards</span>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3>Experience</h3>
+
+                        <div class="timeline-item">
+                            <div class="timeline-title">Cloud Data Engineer – Prestige Financial Services</div>
+                            <div class="timeline-meta">Draper, Utah · June 2021 – Present</div>
+                            <ul class="timeline-list">
+                                <li>Designed, developed, and maintained scalable data pipelines using Snowflake, dbt,
+                                    Prefect, SQL Server, and Databricks for complex data processing and analytics
+                                    workloads.</li>
+                                <li>Built and orchestrated ETL workflows, reducing processing time and improving
+                                    reliability.</li>
+                                <li>Created incremental, SCD, and snapshot dbt models for analytics and historical
+                                    tracking.</li>
+                                <li>Implemented dbt tests and AI-assisted anomaly detection for continuous data quality
+                                    monitoring.</li>
+                                <li>Used LLM-powered scripts to detect structural changes and missing attributes in
+                                    incoming data sources.</li>
+                                <li>Optimized Snowflake performance through clustering, partitioning, and materialized
+                                    views.</li>
+                                <li>Developed reusable, parameterized dbt models for enterprise transformation patterns.
+                                </li>
+                                <li>Built CI/CD pipelines using Azure DevOps for dbt, SQL, and infrastructure
+                                    deployments.</li>
+                                <li>Implemented AWS solutions including EC2, S3, Lambda, SageMaker, CloudWatch, IAM, and
+                                    Secrets Manager.</li>
+                                <li>Supported cloud migration from on-prem to Snowflake and AWS-based architectures.
+                                </li>
+                                <li>Developed Power BI dashboards and implemented change-tracking pipelines for
+                                    real-time Sigma dashboards and live reporting.</li>
+                                <li>Conducted coordinated software releases by aligning data, application, and
+                                    infrastructure deployments into unified release cycles, ensuring minimal downtime
+                                    and smooth cross-team delivery.</li>
+                                <li>Automated validations, regression checks, and deployment rollbacks to reduce
+                                    production risks and support combined releases across environments.</li>
+                                <li>Supported microservices-based architectures for scalable ingestion and processing
+                                    via APIs and event-driven pipelines.</li>
+                                <li>Used Docker and Kubernetes for containerizing, deploying, and scaling cloud-native
+                                    data engineering workloads.</li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-title">AML Data Analyst – Deutsche Bank</div>
+                            <div class="timeline-meta">New York, NY · Aug 2018 – May 2021</div>
+                            <ul class="timeline-list">
+                                <li>Tuned AML monitoring and segmentation models to improve signal quality and alert
+                                    performance.</li>
+                                <li>Developed dashboards and AML management information reports for senior
+                                    stakeholders.
+                                </li>
+                                <li>Automated monitoring processes using Control-M and Oozie; performed detailed
+                                    investigations of suspicious activity.</li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-title">Data Analyst – Madison Consulting Group (Deutsche Bank)
+                            </div>
+                            <div class="timeline-meta">NJ · Nov 2017 – May 2018</div>
+                            <ul class="timeline-list">
+                                <li>Built dashboards and exception reports leveraging Hadoop and BI tools.</li>
+                                <li>Supported threat analytics across Global Markets, Wealth, and Transaction
+                                    Banking.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-title">Data Analyst – Global Data Mart</div>
+                            <div class="timeline-meta">NJ · June 2016 – Nov 2017</div>
+                            <ul class="timeline-list">
+                                <li>Developed Tableau dashboards for a major textile client, analyzing sales,
+                                    product
+                                    performance, and seasonality.</li>
+                                <li>Enabled better demand planning and revenue insights through interactive
+                                    reporting.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3>Selected Projects</h3>
+
+                        <div class="project-item">
+                            <div class="project-title">AI Data Quality Framework</div>
+                            <p>
+                                LLM-based framework to detect missing, inconsistent, and anomalous data across
+                                multiple
+                                sources, improving downstream reporting accuracy.
+                            </p>
+                            <div class="pill-row">
+                                <span class="pill">Python</span>
+                                <span class="pill">LLMs</span>
+                                <span class="pill">Snowflake</span>
+                                <span class="pill">dbt</span>
+                                <span class="pill">Prefect</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-title">Real-Time Sync Pipeline for Dashboards</div>
+                            <p>
+                                Built Prefect + AWS Lambda–based pipelines to continuously sync operational data
+                                into
+                                Sigma and Power BI, powered by change tracking in core systems.
+                            </p>
+                            <div class="pill-row">
+                                <span class="pill">AWS Lambda</span>
+                                <span class="pill">Prefect</span>
+                                <span class="pill">Snowflake</span>
+                                <span class="pill">Sigma</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-title">API Integration Platform</div>
+                            <p>
+                                Created an automated ingestion framework for Webex Call Center, Service Desk,
+                                SharePoint, and Azure APIs, standardizing and loading data into Snowflake for
+                                enterprise analytics.
+                            </p>
+                            <div class="pill-row">
+                                <span class="pill">Python</span>
+                                <span class="pill">REST APIs</span>
+                                <span class="pill">Snowflake</span>
+                                <span class="pill">Prefect</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <div class="project-title">CI/CD & Infrastructure as Code</div>
+                            <p>
+                                Automated dbt and SQL deployments with Azure DevOps and Terraform, enforcing version
+                                control, review workflows, and reproducible environments.
+                            </p>
+                            <div class="pill-row">
+                                <span class="pill">Azure DevOps</span>
+                                <span class="pill">Terraform</span>
+                                <span class="pill">CI/CD</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right column: Skills + Education + Soft Skills -->
+                <aside>
+                    <section class="card">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div>
+                                <div class="skill-heading">AI & ML</div>
+                                <div class="skill-line">
+                                    GitHub Copilot, LLM-based automation, anomaly detection, AWS SageMaker
+                                </div>
+                            </div>
+                            <div>
+                                <div class="skill-heading">Cloud & DevOps</div>
+                                <div class="skill-line">
+                                    AWS (EC2, S3, Lambda, IAM, CloudWatch, Secrets Manager), Azure DevOps,
+                                    Terraform,
+                                    CI/CD
+                                </div>
+                            </div>
+                            <div>
+                                <div class="skill-heading">Data Engineering</div>
+                                <div class="skill-line">
+                                    Snowflake, SQL Server, dbt, Prefect, SSIS, Change Tracking
+                                </div>
+                            </div>
+                            <div>
+                                <div class="skill-heading">Programming</div>
+                                <div class="skill-line">
+                                    Python, SQL, PowerShell, Git Bash, GraphQL
+                                </div>
+                            </div>
+                            <div>
+                                <div class="skill-heading">Visualization</div>
+                                <div class="skill-line">
+                                    Power BI, Sigma, Tableau, Excel
+                                </div>
+                            </div>
+                            <div>
+                                <div class="skill-heading">APIs</div>
+                                <div class="skill-line">Webex, Service Desk, SharePoint, Azure API</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3>Education</h3>
+                        <div class="edu-item">
+                            <div class="edu-title">M.S. Information Systems &amp; Assurance</div>
+                            <div class="edu-meta">Wilmington University · 2016</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-title">B.Tech Electronic &amp; Instrumentation Engineering</div>
+                            <div class="edu-meta">JNTU Hyderabad · 2011</div>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <h3>Soft Skills</h3>
+                        <div class="soft-list">
+                            <span class="soft-chip">Analytical thinking</span>
+                            <span class="soft-chip">Communication</span>
+                            <span class="soft-chip">Agile &amp; DevOps mindset</span>
+                            <span class="soft-chip">Attention to detail</span>
+                            <span class="soft-chip">Stakeholder collaboration</span>
+                            <span class="soft-chip">Adaptability</span>
+                        </div>
+                    </section>
+                </aside>
+            </main>
+
+            <footer>
+                © <span id="year"></span> Mahesh Pasupuleti · Open to Data Engineering / Cloud Data Engineering
+                roles
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

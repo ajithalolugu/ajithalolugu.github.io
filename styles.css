@@ -1,0 +1,313 @@
+/* Reverted — minimal clean stylesheet */
+
+:root {
+    --bg-top: #081424;
+    --bg-bottom: #02111b;
+    --text: #e6eef8;
+    --accent: #ffd24d;
+    --muted: #9fb0c4;
+    --avatar-size: 160px;
+    /* reduced slightly */
+    --max-width: 900px;
+    --radius: 12px;
+    --gap: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    color: var(--text);
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.center {
+    width: min(var(--max-width), 96%);
+}
+
+.profile-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.info {
+    flex: 1;
+    text-align: left;
+    padding-right: 12px;
+}
+
+/* Replace .name highlight with animated cyan→yellow gradient + soft glow */
+.name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    position: relative;
+    display: inline-block;
+    line-height: 1.02;
+    /* switched to blue shades */
+    --g1: #1e40af;
+    /* indigo / deep blue */
+    --g2: #60a5fa;
+    /* lighter blue */
+    background: linear-gradient(90deg, var(--g1), var(--g2), #9cc4ff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 6px 20px rgba(59, 130, 246, 0.06), 0 2px 8px rgba(14, 165, 233, 0.03);
+    transition: transform 220ms ease;
+    animation: name-gradient 3.5s linear infinite;
+}
+
+/* soft colored halo behind the name using blue tones */
+.name::after {
+    content: "";
+    position: absolute;
+    left: -6%;
+    right: -6%;
+    top: -30%;
+    bottom: -10%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.10), rgba(96, 165, 250, 0.06));
+    filter: blur(8px);
+    opacity: 0.6;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 260ms ease, transform 260ms ease;
+}
+
+/* subtle lift and stronger halo on hover */
+.profile-row:hover .name {
+    transform: translateY(-3px);
+}
+
+.profile-row:hover .name::after {
+    opacity: 0.92;
+    transform: scale(1.03);
+}
+
+/* animate gradient sweep */
+@keyframes name-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.role {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.sub {
+    margin-top: 8px;
+    color: rgba(230, 238, 248, 0.9);
+}
+
+.avatar-container {
+    width: calc(var(--avatar-size) + 12px);
+    flex: 0 0 calc(var(--avatar-size) + 12px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.avatar {
+    /* Adjust avatar crop so full face (hair to chin) is visible */
+    /* make the image a bit taller so hair + chin fit */
+    width: 200px;
+    height: 260px;
+    /* taller frame to include chin */
+    object-fit: cover;
+    /* keep image filling the frame */
+    object-position: 50% 38%;
+    /* shift focal point down slightly (tweak Y% if needed) */
+    border-radius: 20px;
+    /* oval/rounded-rectangle look */
+    border: 3px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+/* mobile: scale down but keep headroom */
+@media (max-width: 720px) {
+    .profile-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        padding-right: 0;
+    }
+
+    .avatar-container {
+        justify-content: center;
+        width: auto;
+        flex: 0 0 auto;
+        margin-top: 8px;
+    }
+
+    /* scaled oval for smaller screens */
+    .avatar {
+        width: 140px;
+        height: 180px;
+        object-position: 50% 36%;
+        border-radius: 16px;
+    }
+}
+
+.btn-wrap {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.btn-portfolio {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #072033;
+    border: none;
+    z-index: 1;
+
+    /* switched to blue animated gradient */
+    --g1: #1e3a8a;
+    /* deep blue */
+    --g2: #3b82f6;
+    /* bright blue */
+    background: linear-gradient(90deg, var(--g1), var(--g2), #9cc4ff);
+    background-size: 200% 100%;
+    animation: btn-gradient 3.6s linear infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+}
+
+/* soft halo behind the button using blue tones */
+.btn-portfolio::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.12), rgba(96, 165, 250, 0.12));
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.85;
+    transform: scale(0.98);
+    transition: transform 220ms ease, opacity 220ms ease;
+}
+
+/* sliding sheen */
+.btn-portfolio::after {
+    content: "";
+    position: absolute;
+    left: -80%;
+    top: -10%;
+    width: 50%;
+    height: 120%;
+    transform: skewX(-20deg);
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    opacity: 0;
+    pointer-events: none;
+    transition: left 420ms ease, opacity 260ms ease;
+    z-index: 2;
+}
+
+/* hover interactions */
+.btn-portfolio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.6), 0 0 18px rgba(59, 130, 246, 0.06);
+}
+
+.btn-portfolio:hover::after {
+    left: 120%;
+    opacity: 1;
+}
+
+.btn-portfolio:hover::before {
+    transform: scale(1.02);
+    opacity: 1;
+}
+
+/* gradient movement keyframes */
+@keyframes btn-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* focus accessibility */
+.btn-portfolio:focus {
+    outline: none;
+    box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.08);
+}
+
+/* utility: trigger initial animations from HTML by adding classes */
+.name.animate-shine {
+    animation: btn-pulse 2200ms ease 1;
+}
+
+.btn-portfolio.pulse {
+    animation: btn-pulse 2200ms ease 1;
+}
+
+/* responsive */
+@media (max-width: 720px) {
+    .profile-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        padding-right: 0;
+    }
+
+    .avatar-container {
+        justify-content: center;
+        width: auto;
+        flex: 0 0 auto;
+        margin-top: 8px;
+    }
+
+    /* scaled oval for smaller screens */
+    .avatar {
+        width: 140px;
+        height: 180px;
+        object-position: 50% 36%;
+        border-radius: 16px;
+    }
+}
